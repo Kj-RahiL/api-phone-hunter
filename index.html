@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwind and daisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <head class="">
+        <!-- banner section -->
+        <section class="bg-blue-50">
+            <nav class="flex justify-between py-14 w-11/12 mx-auto">
+                <h3 class="text-2xl font-bold">Hot Gadget</h3>
+                <button class="btn bg-[#0D6EFD] text-white hover:text-black">Sign Up</button>
+            </nav>
+            <!-- banner text -->
+            <div class="text-center w-3/5 mx-auto">
+                <h1 class="text-6xl font-bold">Apple Iphone 13 Pro Max</h1>
+                <p class="text-xl text-[#706F6F] my-8">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
+                <button class="btn bg-[#0D6EFD] text-white hover:text-black">Buy Now</button>
+            </div>
+        </section>
+    </head>
+    <main>
+        <section>
+            <h1 class="text-center font-semibold text-4xl mb-7">Search Your Phone</h1>
+            <div class="  w-2/4 mx-auto flex ">
+                <input id="search-field" class="flex-1 pl-5 bg-gray-50 rounded-lg" type="text" placeholder="Search your phone">
+                <button onclick="handleSearch()" class="btn bg-[#0D6EFD] text-white hover:text-black">Search</button>
+            </div>
+        </section>
+        <section>
+            <div id="phone-container" class="grid lg:grid-cols-3 md:grid-cols-2 gap-5 w-11/12 mx-auto">
+               
+                  </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- script file add -->
+    <script src="./js/script.js"></script>
+    <!-- <script src="/js/index.js"></script> -->
+
+    <!-- <script src="js/copy.js"></script> -->
+
+
+</body>
+
+</html>
