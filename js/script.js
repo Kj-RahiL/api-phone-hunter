@@ -7,8 +7,18 @@ const loadPhone = async (searchText) => {
 
 const displayPhones = phones => {
     const divContainer = document.getElementById('phone-container');
+    divContainer.textContent='';
+// display show all utton
+    const showAll = document.getElementById('show-all-container');
+    if(phones.length > 12 ){
+        showAll.classList.remove('hidden')
+    }else{
+        showAll.classList.add('hidden')
+    }
+    // display show only 1st 12
+    phones = phones.slice(0,12)
     phones.forEach(phone =>{
-        console.log(phone)
+        // console.log(phone)
         const phoneCard = document.createElement('div');
         phoneCard.classList = `card shadow-xl bg-blue-50 `;
         phoneCard.innerHTML = `
@@ -25,16 +35,28 @@ const displayPhones = phones => {
         `;
         divContainer.appendChild(phoneCard) 
     });
+    // hide toggelespinner
+    toggleSpinner(false);
 }
 
 // handle search
 const handleSearch = () =>{
+    toggleSpinner(true);
     const inputField = document.getElementById('search-field');
     const searchField = inputField.value;
+    inputField.value = '';
     console.log(searchField)
     loadPhone(searchField)
 }
+const toggleSpinner = (isLoading)  =>{
+    const loadingSpinner = document.getElementById('loading-spinner')
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden')
+    }else{
+        loadingSpinner.classList.add('hidden')
 
+    }
+}
 // loadPhone();
 
 // console.log('heloo')
